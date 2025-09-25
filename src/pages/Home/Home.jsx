@@ -5,7 +5,7 @@ import Feature from "../Features/Features";
 const Home = () => {
   return (
     <div className="home">
-      {/* Hero Section */}
+      
       <section className="hero">
         <div className="hero-content">
           <div className="hero-text">
