@@ -1,6 +1,8 @@
 import React from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
+import RouterConstant from "../../constant/RouterConstant";
+
 
 const Navbar = () => {
   return (
@@ -14,11 +16,12 @@ const Navbar = () => {
       <div className="navbar-right">
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>
-           <li><Link to="/About" className="about">About</Link></li>
-            <li><Link to="/Features">Features</Link></li>
+          <li><Link to="/About" className="about">About</Link></li>
+          <li><Link to="/Features">Features</Link></li>
 
         </ul>
-        <Link className="apply-btn" to="/ExamForm">Apply Now</Link>
+        <Link className="apply-btn" to={RouterConstant.ExamForm}>Apply Now</Link>
+        <Link className="apply-btn" to={RouterConstant.ExamForm}>Login</Link>
       </div>
     </nav>
   );
