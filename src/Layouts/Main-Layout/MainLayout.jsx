@@ -1,6 +1,6 @@
 // src/app/layouts/main-layout/MainLayout.jsx
 import React from "react";
-import Sidebar from "../../component/sidebar/sidebar";
+import Sidebar from "../../component/sidebar/sidebar.jsx";
 import "./MainLayout.css";
 
 

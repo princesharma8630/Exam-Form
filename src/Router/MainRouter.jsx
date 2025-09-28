@@ -4,13 +4,13 @@ import PrivateRouter from "./PrivateRouter";
 import AuthLayout from "../Layouts/Auth-Layout/AuthLayout";
 import MainLayout from "../Layouts/Main-Layout/MainLayout";
 import RouterConstant from "../constant/RouterConstant";
-import Home from "../pages/Home/Home";
-import About from "../pages/Abouts/About";
-import Features from "../pages/Features/Features";
-import ExamForm from "../pages/ExamForm/ExamForm";
-import Login from "../Auth/Authpages/login/login"
-import Signup from "../Auth/Authpages/signup/signup";
-import Help from "../pages/help/help";
+import Home from "../pages/Home/Home.jsx";
+import About from "../pages/Abouts/About.jsx";
+import Features from "../pages/Features/Features.jsx";
+import ExamForm from "../pages/ExamForm/ExamForm.jsx";
+import Login from "../Auth/Authpages/login/login.jsx"
+import Signup from "../Auth/Authpages/signup/signup.jsx";
+import Help from "../pages/help/Help.jsx";
 // import Dashboard from "../pages/Dashboard/Dashboard";
 
 const MainRouter = () => {
