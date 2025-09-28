@@ -1,4 +1,4 @@
-import { Routes, Route, Router } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import PublicRouter from "./PublicRouter";
 import PrivateRouter from "./PrivateRouter";
 import AuthLayout from "../Layouts/Auth-Layout/AuthLayout";
@@ -11,10 +11,11 @@ import ExamForm from "../pages/ExamForm/ExamForm";
 import Login from "../Auth/Authpages/login/login"
 import Signup from "../Auth/Authpages/signup/signup";
 import Sidebar from "../component/sidebar/sidebar";
-import UserProfile from "../component/sidebar/userProfile";
+import Help from "../pages/help/help";
 // import Dashboard from "../pages/Dashboard/Dashboard";
 
 const MainRouter = () => {
+  console.log("Main Router Rendered");
   return (
     <Routes>
       {/* Public Routes */}
@@ -27,11 +28,11 @@ const MainRouter = () => {
       </Route>
 
       {/* Private Routes */}
-      <Route path="/" element={<PrivateRouter />}>
+      <Route path="/" element={<PrivateRouter/>}>
        
         <Route path={RouterConstant.ExamForm} element={<MainLayout><ExamForm /></MainLayout>} />
-        <Route path="/userProfile" element={<MainLayout><UserProfile/></MainLayout>} />
         <Route path ={RouterConstant.pHome} element={<MainLayout><Home/></MainLayout>}/>
+        <Route path={RouterConstant.pHelp} element={<MainLayout><Help/></MainLayout>}/>
         
         
         {/* <Route path="dashboard" element={<MainLayout><Dashboard /></MainLayout>} /> */}

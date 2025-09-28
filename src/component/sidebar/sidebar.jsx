@@ -4,11 +4,14 @@ import SidebarItem from './SidebarItem';
 import './sidebar.css';
 import RouterConstant from '../../constant/RouterConstant';
 import {  useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { logout } from '../../Auth/AuthSlice/AuthSlice';
 
 const Sidebar = () => {
     const [isCollapsed, setIsCollapsed] = useState(false);
     const [activeItem, setActiveItem] = useState('dashboard');
     const navigate = useNavigate();
+    const dispatch =useDispatch();        
 
     const menuItems = [
         // {
@@ -46,7 +49,7 @@ const Sidebar = () => {
             id: 'help',
             label: 'Help & Support',
             icon: '?',
-            path: '/help'
+            path: RouterConstant.pHelp,
         },
         
         {
@@ -68,7 +71,7 @@ const Sidebar = () => {
     };
 
     const handleLogout = () => {
-        // Add logout logic here
+        dispatch(logout())
         console.log('Logging out...');
         // dispatch logout action, clear tokens, redirect to login
     };

@@ -4,7 +4,7 @@ import { loginSuccess, logout } from "../Auth/AuthSlice/AuthSlice";
 
 
 const AuthProvider=({children})=>{
-const dispatch = useDispatch();
+const dispatch = dispatch();
     useEffect(()=>{
         const unsubscribe = onIdTokenChanged(auth , async(user)=>{
             if(user){

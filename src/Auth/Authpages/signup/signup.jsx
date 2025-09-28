@@ -11,20 +11,14 @@ const Signup = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [isLoading, setIsLoading] = useState(false);
-    const dispatch = useDispatch();
-
+   const navigate = useNavigate();
     const handleSignup = async (e) => {
         e.preventDefault();
         setIsLoading(true);
-        const navigate = useNavigate();
+        
         
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-            const user = userCredential.user;
-            const token = await user.getIdToken();
-
-            // Dispatch login success action with token and user info
-            dispatch(loginSuccess({ user, token }));
             alert("✅ Signup successful! Now you can login.");
             navigate(RouterConstant.Login);
         } catch (error) {

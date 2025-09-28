@@ -5,6 +5,7 @@ import Footer from "../../component/Footer/Footer";
 
 
 const AuthLayout = ({ children }) => {
+    console.log("AuthLayout Rendered");
     return (
         <div className="auth-layout">
             <Navbar />

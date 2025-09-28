@@ -2,7 +2,7 @@ const RouterConstant = {
     Home:'/',
     About:'/about',
     Features:'/features',
-    ExamForm:'/exam-form',
+    
     Login:'/login',
     Signup:'/signup',
     Deshbord:'/deshbord',
@@ -12,10 +12,12 @@ const RouterConstant = {
     Navbar:'navbar',
 
 
-    //private route
+    //private route p for Private
     pHome:'/pHome',
     pAbout:'/pAbout',
-    amForm:'/exam-form',
+    pHelp:'/help',
+    ExamForm:'/exam-form',
+
     
 }
 export default RouterConstant;

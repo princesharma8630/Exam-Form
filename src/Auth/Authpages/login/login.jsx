@@ -4,7 +4,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../../firebaseConfig";
 import { loginSuccess } from "../../AuthSlice/AuthSlice";
 import './login.css'; 
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import RouterConstant from "../../../constant/RouterConstant";
 
 const Login = () => {
@@ -24,11 +24,15 @@ const Login = () => {
             const token = await user.getIdToken();
 
             // Dispatch login success action with token and user info
-            dispatch(loginSuccess({ user, token }));
+            dispatch(loginSuccess({ 
+              uid: user.uid, email: user.email, displayName: user.displayName, token:token }));
             alert("Login successful!");
+           navigate(RouterConstant.pHome);
         } catch (error) {
             console.log("Login failed", error.message);
-            alert("Login failed: " + error.message);
+            alert("Login failed: invalid email or password. please try again.");
+            setEmail("");
+            setPassword("");
         } finally {
             setIsLoading(false);
         }
