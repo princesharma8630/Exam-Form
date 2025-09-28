@@ -5,12 +5,11 @@ import AuthLayout from "../Layouts/Auth-Layout/AuthLayout";
 import MainLayout from "../Layouts/Main-Layout/MainLayout";
 import RouterConstant from "../constant/RouterConstant";
 import Home from "../pages/Home/Home";
-import About from "../pages/About/About";
+import About from "../pages/Abouts/About";
 import Features from "../pages/Features/Features";
 import ExamForm from "../pages/ExamForm/ExamForm";
 import Login from "../Auth/Authpages/login/login"
 import Signup from "../Auth/Authpages/signup/signup";
-import Sidebar from "../component/sidebar/sidebar";
 import Help from "../pages/help/help";
 // import Dashboard from "../pages/Dashboard/Dashboard";
 

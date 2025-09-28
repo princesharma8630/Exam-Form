@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import About from "../About/About";
+import About from "../Abouts/About";
 import Feature from "../Features/Features";
 const Home = () => {
   return (
