@@ -7,7 +7,7 @@ import "./MainLayout.css";
 const MainLayout = ({ children }) => {
   return (
     <div className="main-layout">
-       <div><Sidebar/></div> 
+       <Sidebar/>
       <div className="main-content">
         <header className="topbar">
           <h1>Dashboard</h1>
