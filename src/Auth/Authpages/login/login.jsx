@@ -70,7 +70,7 @@ const Login = () => {
                 >
                     {isLoading ? "Logging in..." : "Login"}
                 </button>
-                <button onClick={()=>navigate(RouterConstant.Signup)}>New User</button>
+                <button className="new-user-btn"  onClick={()=>navigate(RouterConstant.Signup)}>New User</button>
             </form>
         </div>
     );

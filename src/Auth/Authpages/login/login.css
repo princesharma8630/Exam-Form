@@ -102,6 +102,25 @@
     font-size: 24px;
   }
 }
+.new-user-btn {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  background: #f1f1f1;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+} 
+
+
+
+
 
 /* Alternative minimal style - uncomment if you prefer */
 /*
