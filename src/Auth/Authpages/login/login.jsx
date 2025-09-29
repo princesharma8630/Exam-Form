@@ -50,7 +50,7 @@ const Login = () => {
     return (
 
         <>
-        {isLoading && <LoadingPage title="Logging in...." head="wellcome in your App"/>}
+        {isLoading && <LoadingPage title="Logging in...." head="Hang tight ⏳ Getting things ready for you.."/>}
 
         <div className="login-container">
            

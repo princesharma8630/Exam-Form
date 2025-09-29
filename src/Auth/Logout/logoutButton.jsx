@@ -21,7 +21,7 @@ const isCollapsed = false; // You can pass this as a prop if needed
     };
 
     return(<>   
-      {isLoading && <LoadingPage title="Logging out.." head="Take care my User"/>}
+      {isLoading && <LoadingPage title="Logging out.." head="Goodbye for now 👋 Come back soon!"/>}
       <button
         className={`logout-btn ${isCollapsed ? "collapsed" : ""}`}
         onClick={handleLogout}
