@@ -5,7 +5,7 @@ import './sidebar.css';
 import RouterConstant from '../../constant/RouterConstant';
 import {  useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { logout } from '../../Auth/AuthSlice/AuthSlice';
+import LogoutButton from '../../Auth/Logout/logoutButton';
 
 const Sidebar = () => {
     const [isCollapsed, setIsCollapsed] = useState(false);
@@ -70,11 +70,7 @@ const Sidebar = () => {
         console.log(`Navigating to: ${itemId}`);
     };
 
-    const handleLogout = () => {
-        dispatch(logout())
-        console.log('Logging out...');
-        // dispatch logout action, clear tokens, redirect to login
-    };
+   
 
     return (
         <div className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>
@@ -115,13 +111,7 @@ const Sidebar = () => {
 
             {/* Sidebar Footer */}
             <div className="sidebar-footer">
-                <button 
-                    className={`logout-btn ${isCollapsed ? 'collapsed' : ''}`}
-                    onClick={handleLogout}
-                >
-                    <span className="logout-icon">🚪</span>
-                    {!isCollapsed && <span>Logout</span>}
-                </button>
+               <LogoutButton isCollapsed={isCollapsed}/>
                 {!isCollapsed && (
                     <div className="app-version">
                         v1.0.0

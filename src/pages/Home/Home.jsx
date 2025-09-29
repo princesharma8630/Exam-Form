@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import About from "../Abouts/About";
 import Feature from "../Features/Features";
+import LoadingPage from "../../component/Loader/Loader";
 const Home = () => {
   return (
     <div className="home">
@@ -73,6 +74,7 @@ const Home = () => {
         <About/>
         <Feature/>
     </div>
+   
   );
 };
 

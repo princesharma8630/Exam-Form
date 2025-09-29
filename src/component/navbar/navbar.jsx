@@ -5,6 +5,7 @@ import RouterConstant from "../../constant/RouterConstant";
 
 
 const Navbar = () => {
+
   return (
     <nav className="navbar">
       {/* Left Section */}
@@ -16,12 +17,14 @@ const Navbar = () => {
       <div className="navbar-right">
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/About" className="about">About</Link></li>
+          <li><Link to="/About" >About</Link></li>
           <li><Link to="/Features">Features</Link></li>
 
         </ul>
         <Link className="apply-btn" to={RouterConstant.ExamForm}>Apply Now</Link>
-        <Link className="apply-btn" to={RouterConstant.ExamForm}>Login</Link>
+        <Link className="apply-btn" to={RouterConstant.pHome}>Login</Link>
+        
+
       </div>
     </nav>
   );
