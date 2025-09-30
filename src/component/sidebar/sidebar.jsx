@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import UserProfile from './userProfile';
+import UserProfile from './UserProfile1';
 import SidebarItem from './SidebarItem';
 import './sidebar.css';
 import RouterConstant from '../../constant/RouterConstant';
