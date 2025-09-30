@@ -6,7 +6,7 @@ import RouterConstant from '../../constant/RouterConstant';
 import {  Router, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import LogoutButton from '../../Auth/Logout/logoutButton';
-import Profile from '../../pages/Profile/Profile';
+
 
 const Sidebar = () => {
     const [isCollapsed, setIsCollapsed] = useState(false);
