@@ -3,8 +3,13 @@ import "./Home.css";
 import About from "../Abouts/About";
 import Feature from "../Features/Features";
 import LoadingPage from "../../component/Loader/Loader";
+import Profile from "../Profile/Profile";
+import UsersTable from "../../component/UserTable/UserTable";
 const Home = () => {
-  return (
+ 
+  return (<>
+    
+    
     <div className="home">
       
       <section className="hero">
@@ -74,6 +79,7 @@ const Home = () => {
         <About/>
         <Feature/>
     </div>
+    </>
    
   );
 };

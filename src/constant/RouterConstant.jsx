@@ -1,12 +1,12 @@
+import Profile from "../pages/Profile/Profile";
+
 const RouterConstant = {
     Home:'/',
     About:'/about',
     Features:'/features',
-    
     Login:'/login',
     Signup:'/signup',
     Deshbord:'/deshbord',
-    Profile:'/userProfile',
     Setting:'/setting',
     Sidebar:'/sidebar',
     Navbar:'navbar',
@@ -17,6 +17,8 @@ const RouterConstant = {
     pAbout:'/pAbout',
     pHelp:'/help',
     ExamForm:'/exam-form',
+    Profile:'/profile',
+    UsersTable:'/usersTable',
 
     
 }

@@ -11,6 +11,8 @@ import ExamForm from "../pages/ExamForm/ExamForm.jsx";
 import Login from "../Auth/Authpages/login/login.jsx"
 import Signup from "../Auth/Authpages/signup/signup.jsx";
 import Help from "../pages/help/Help.jsx";
+import Profile from "../pages/Profile/Profile.jsx";
+import UsersTable from "../component/UserTable/UserTable.jsx";
 // import Dashboard from "../pages/Dashboard/Dashboard";
 
 const MainRouter = () => {
@@ -32,6 +34,9 @@ const MainRouter = () => {
         <Route path={RouterConstant.ExamForm} element={<MainLayout><ExamForm /></MainLayout>} />
         <Route path ={RouterConstant.pHome} element={<MainLayout><Home/></MainLayout>}/>
         <Route path={RouterConstant.pHelp} element={<MainLayout><Help/></MainLayout>}/>
+        <Route path={RouterConstant.Profile} element={<MainLayout><Profile/></MainLayout>}/>
+        <Route path={RouterConstant.UsersTable} element={<MainLayout><UsersTable/></MainLayout>}/>
+
         
         
         {/* <Route path="dashboard" element={<MainLayout><Dashboard /></MainLayout>} /> */}

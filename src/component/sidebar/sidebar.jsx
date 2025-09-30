@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import UserProfile from './UserProfile';
+import UserProfile from './userProfile';
 import SidebarItem from './SidebarItem';
 import './sidebar.css';
 import RouterConstant from '../../constant/RouterConstant';
-import {  useNavigate } from 'react-router-dom';
+import {  Router, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import LogoutButton from '../../Auth/Logout/logoutButton';
+import Profile from '../../pages/Profile/Profile';
 
 const Sidebar = () => {
     const [isCollapsed, setIsCollapsed] = useState(false);
@@ -36,7 +37,7 @@ const Sidebar = () => {
             id: 'profile',
             label: 'Profile',
             icon: '◉',
-            path: '/profile'
+            path: RouterConstant.Profile,
         },
        
         {
@@ -58,6 +59,13 @@ const Sidebar = () => {
             icon: '⚙',
             path: '/settings'
         },
+        {
+            id:'users',
+            label:'users',
+            icon: '🔍',
+            path: RouterConstant.UsersTable,
+
+        }
     ];
 
     const toggleSidebar = () => {
