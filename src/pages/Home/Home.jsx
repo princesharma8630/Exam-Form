@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import About from "../Abouts/About";
 import Feature from "../Features/Features";
 import LoadingPage from "../../component/Loader/Loader";
 import Profile from "../Profile/Profile";
 import UsersTable from "../../component/UserTable/UserTable";
+import getUsers from "../../Services/UserService";
+
 const Home = () => {
+  const [users , setUsers] = useState([]);
+  useEffect( ()=>{
+    const fetchData = async()=>{
+ const data = await getUsers();
+   setUsers(data.users); }
+  fetchData();
+  },[]);
+
  
   return (<>
     
@@ -25,7 +35,7 @@ const Home = () => {
             </p>
             <div className="hero-stats">
               <div className="stat">
-                <span className="stat-number">50K+</span>
+                <span className="stat-number">{users.length}</span>
                 <span className="stat-label">Students Registered</span>
               </div>
               <div className="stat">

@@ -5,7 +5,7 @@ import LogoutButton from "../../Auth/Logout/logoutButton";
 import './Profile.css';
 
 function Profile() {
-  const user = useSelector((state) => state.auth.user);
+  const user = useSelector((state) => state.auth.user)|| JSON.parse(localStorage.getItem("user"));
   const [isEditingName, setIsEditingName] = useState(false);
   const [isEditingPhone, setIsEditingPhone] = useState(false);
   const [isEditingAddress, setIsEditingAddress] = useState(false);

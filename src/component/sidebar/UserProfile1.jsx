@@ -1,8 +1,27 @@
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 const UserProfile = ({ isCollapsed }) => {
     // Get user data from Redux store (assuming you have user data in AuthSlice)
-    const user = useSelector((state) => state.auth.user);
+
+   
+   const user = useSelector((state) => state.auth.user) || JSON.parse(localStorage.getItem('user'));
+
+     if (!user) {
+        return (
+            <div className={`user-profile ${isCollapsed ? 'collapsed' : ''}`}>
+                <div className="user-avatar">
+                    <div className="avatar-initials">--</div>
+                </div>
+                {!isCollapsed && (
+                    <div className="user-info">
+                        <div className="user-name">Loading...</div>
+                        <div className="user-email">Please wait</div>
+                    </div>
+                )}
+            </div> 
+        );
+    }
     
     // Default user data if not available
     const userData = {

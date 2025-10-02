@@ -16,6 +16,8 @@ const isCollapsed = false; // You can pass this as a prop if needed
 
     setTimeout(()=>{
         dispatch(logout());
+        localStorage.removeItem('user');
+        localStorage.removeItem('token');
         setIsLoading(false);
         alert("Logged Out succcessfully"); },1500);
     };
