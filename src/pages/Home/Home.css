@@ -6,7 +6,7 @@
 
 /* Hero Section */
 .hero {
-  min-height: 100vh;
+  height: 200vh;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   position: relative;
   overflow: hidden;
@@ -153,8 +153,10 @@
 
 /* Hero Image/Cards Section */
 .hero-image {
-  position: relative;
- min-height: 500px;
+  position: absolute;
+  top: 80%;
+ height: 100vh;
+ width: 100vh;
 }
 
 .floating-card {
@@ -173,35 +175,24 @@
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
-.card-1 {
-   
+.card-1{
+  position: absolute;
   animation: float 3s ease-in-out infinite;
 }
 
-.card-2 {
+.card-2{
+  position: absolute;
   animation: float 3s ease-in-out infinite 1s;
 }
 
-.card-3 {
+.card-3{
+  position: absolute;
+ top: 35%;
+
   animation: float 3s ease-in-out infinite 2s;
 }
 
-.hero-image .floating-card:nth-child(1) {
-  top: 50px;
-  left: 0;
-  z-index: 3;
-}
 
-.hero-image .floating-card:nth-child(2) {
-  top: 50px;
-  right: 0px;
-  z-index: 2;
-}
-.hero-image .floating-card:nth-child(3) {
-  top: 230px;
-  right: 50px;
-  z-index: 3;
-}
 
 
 
@@ -213,21 +204,6 @@
 .card-icon {
   font-size: 2.5rem;
   margin-bottom: 12px;
-}
-
-.floating-card h4,
-.card-3 h4 {
-  font-size: 1.3rem;
-  color: #333;
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-
-.floating-card p,
-.card-3 p {
-  color: #666;
-  font-size: 0.95rem;
-  margin: 0;
 }
 
 /* CTA Section */
