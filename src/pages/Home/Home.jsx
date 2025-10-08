@@ -6,31 +6,33 @@ import LoadingPage from "../../component/Loader/Loader";
 import Profile from "../Profile/Profile";
 import UsersTable from "../../component/UserTable/UserTable";
 import getUsers from "../../Services/UserService";
+import UserList from "../../component/UserTable/userList";
 
 const Home = () => {
-  const [users , setUsers] = useState([]);
-  useEffect( ()=>{
-    const fetchData = async()=>{
- const data = await getUsers();
-   setUsers(data.users); }
-  fetchData();
-  },[]);
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getUsers();
+      setUsers(data.users);
+    }
+    fetchData();
+  }, []);
 
- 
+
   return (<>
-    
-    
+
+
     <div className="home">
-      
+
       <section className="hero">
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title">
-              Shape Your Future with 
+              Shape Your Future with
               <span className="highlight"> Excellence</span>
             </h1>
             <p className="hero-subtitle">
-              Join thousands of successful candidates who trusted us with their exam preparation. 
+              Join thousands of successful candidates who trusted us with their exam preparation.
               Your journey to success starts here with our comprehensive examination portal.
             </p>
             <div className="hero-stats">
@@ -72,7 +74,7 @@ const Home = () => {
         </div>
       </section>
 
-      
+
 
       {/* CTA Section */}
       <section className="cta-section">
@@ -86,11 +88,11 @@ const Home = () => {
           </div>
         </div>
       </section>
-        <About/>
-        <Feature/>
+      <About />
+      <Feature />
     </div>
-    </>
-   
+  </>
+
   );
 };
 
