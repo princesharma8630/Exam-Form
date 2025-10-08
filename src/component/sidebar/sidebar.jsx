@@ -10,7 +10,7 @@ import LogoutButton from '../../Auth/Logout/logoutButton';
 
 const Sidebar = () => {
     const [isCollapsed, setIsCollapsed] = useState(false);
-    const [activeItem, setActiveItem] = useState('dashboard');
+    const [activeItem, setActiveItem] = useState('home');
     const navigate = useNavigate();
     const dispatch =useDispatch();        
 

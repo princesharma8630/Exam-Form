@@ -147,7 +147,7 @@ const Features = () => {
               </div>
             </div>
           </div>
-          <div className="hero-visual">
+        <div className="hero-visual">
             <div className="floating-elements">
               <div className="floating-card card-1">
                 <div className="card-icon">📊</div>
@@ -165,6 +165,9 @@ const Features = () => {
           </div>
         </div>
       </section>
+
+
+      
 
       {/* Main Features Section */}
       <section className="main-features">

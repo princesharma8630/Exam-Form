@@ -16,7 +16,8 @@
   color: white;
   padding: 6rem 0;
   position: relative;
-  overflow: hidden;
+  height: 200vh;
+   overflow: hidden;
 }
 
 .features-hero::before {
@@ -86,11 +87,11 @@
 /* Hero Visual */
 .hero-visual {
   position: absolute;
-  right: -10%;
+  right:30%;
   top: 50%;
   transform: translateY(-50%);
-  width: 400px;
-  height: 400px;
+  width: 100vb;
+  height: 800px;
 }
 
 .floating-elements {
@@ -111,20 +112,23 @@
 }
 
 .card-1 {
-  top: 20%;
+  position: absolute;
+  top: 70%;
   left: 10%;
   animation-delay: 0s;
 }
 
 .card-2 {
-  top: 60%;
-  right: 10%;
+  position: absolute;
+  top: 70%;
+  right: -40%;
   animation-delay: 1.5s;
 }
 
 .card-3 {
-  bottom: 10%;
-  left: 30%;
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
   animation-delay: 3s;
 }
 
