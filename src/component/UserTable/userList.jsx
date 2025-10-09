@@ -1,49 +1,57 @@
-import { useQuery } from "@tanstack/react-query";
-import getUsers from "../../Services/UserService";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 function UserList() {
-  const fetchData = async () => {
-    const res = await getUsers();
-    console.log("API response in fetchData:", res);
+  const [users, setUsers] = useState([]);
+  const [page, setPage] = useState(1);
+  const usersPerPage = 5;
 
-    if (Array.isArray(res)) {
-      return res;
-    } else if (res && res.users) {
-      return res.users;
-    } else {
-      return [];
-    }
-  };
+  // Fetch all users once
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const res = await axios.get("https://dummyjson.com/users");
+        setUsers(res.data);
+      } catch (error) {
+        console.error("Error fetching users:", error);
+      }
+    };
+    fetchUsers();
+  }, []);
 
-  const { data, error, isLoading, isError } = useQuery({
-    queryKey: ["userlist"],
-    queryFn: fetchData,
-    staleTime: 5000,
-    cacheTime: 10000,
-  });
-
-  if (isLoading) return <h1>Data is loading, wait please...</h1>;
-
-  if (isError) {
-    console.log("Error in userlist:", error);
-    return <h1>Something went wrong, please try again</h1>;
-  }
+  // Pagination logic
+  const indexOfLastUser = page * usersPerPage;
+  const indexOfFirstUser = indexOfLastUser - usersPerPage;
+  const currentUsers = users.slice(indexOfFirstUser, indexOfLastUser);
+  const totalPages = Math.ceil(users.length / usersPerPage);
 
   return (
-    <>
-      <h1>User List</h1>
+    <div style={{ margin: "auto", textAlign: "center" }}>
+      <h1>User List (Page {page})</h1>
+
       <ul>
-        {data?.length > 0 ? (
-          data.map((user) => (
-            <li key={user.id}>
-              {user.name} / {user.email}
-            </li>
-          ))
-        ) : (
-          <li>No users found</li>
-        )}
+        {currentUsers.map((user) => (
+          <li key={user.id}>{user.name} / {user.email}</li>
+        ))}
       </ul>
-    </>
+
+      <div style={{ marginTop: "1rem" }}>
+        <button
+          onClick={() => setPage((old) => Math.max(old - 1, 1))}
+          disabled={page === 1}
+          style={{ marginRight: "10px" }}
+        >
+          Previous
+        </button>
+
+        <button
+          onClick={() => setPage((old) => Math.min(old + 1, totalPages))}
+          disabled={page === totalPages}
+        >
+          Next
+        </button>
+      </div>
+    </div>
   );
 }
 

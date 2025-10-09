@@ -9,6 +9,7 @@ import getUsers from "../../Services/UserService";
 import UserList from "../../component/UserTable/userList";
 
 const Home = () => {
+ 
   const [users, setUsers] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -20,8 +21,6 @@ const Home = () => {
 
 
   return (<>
-
-
     <div className="home">
 
       <section className="hero">
